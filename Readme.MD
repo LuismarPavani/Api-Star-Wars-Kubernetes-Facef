@@ -22,7 +22,7 @@ docker run -p 8080:8080 luismar/api_star_wars:0.0.2
 kubeclt get nodes -o wide - lista os nodes com mais informacoes
 kubeclt get pods -o wide - lista os pods com mais informacoes
 kubectl get pods -w - lista os pods e acompanha todas as alteracoes
-kubectl set image deployment hello-api hello-api=diegoferandens/k8s-facef:0.0.2 - troca a imagem e versão do deployment
+kubectl set image deployment hello-api hello-api=luismar/api_star_wars:0.0.2 - troca a imagem e versão do deployment
 kubectl logs -f pods <pod_id> - mostra os logs do pod e acompanha novas saidas de logs
 kubectl logs -p <pod_id> - mostra os logs antes do restart do pod/container
 kubectl describe pod <pod_id> - exibe todas as informacoes de um pod
@@ -32,7 +32,7 @@ kubectl apply -f file.yaml - aplica todos os recursos descritos no arquivo
 kubectl diff -f file.yaml - exibe as diferenças entre o cluster e o arquivo
 kubectl delete -f file.yaml - apaga todos os recursos descritos no arquivo
 
-kubectl autoscale deployment hello-api-deployment --min 1 --max 10 --cpu-percent 50 - cria um autoscale para o deployment
+kubectl autoscale deployment api-star-wars-deployment --min 1 --max 10 --cpu-percent 50 - cria um autoscale para o deployment
 
 
 microk8s enable metrics-server - habilita o metric-server
