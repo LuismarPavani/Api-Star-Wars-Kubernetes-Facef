@@ -39,7 +39,7 @@ microk8s enable metrics-server - habilita o metric-server
 minikube addons enable metrics-server - habilita o metric-server
 
 
-kubectl run -it --rm load-generator --image=busybox /bin/sh
+ --rm load-generator --image=busybox /bin/sh
 while true; do wget -q -O- http://api-star-wars-service:8080; done
 
 ```
