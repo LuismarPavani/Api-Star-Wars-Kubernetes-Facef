@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "github.com/LuismarPavani/Api-Star-Wars-Kubernetes-Facef/cmd"
+import "/cmd"
 
 func main() {
 	cmd.Execute()
