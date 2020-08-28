@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "github.com/diegofernandes/k8s-facef/cmd"
+import "github.com/LuismarPavani/Api-Star-Wars-Kubernetes-Facef/cmd"
 
 func main() {
 	cmd.Execute()
