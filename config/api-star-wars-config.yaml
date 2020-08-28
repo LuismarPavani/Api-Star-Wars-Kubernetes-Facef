@@ -8,6 +8,6 @@ data:
   config_file: "/config/api-star-wars.yaml"
   #
   # file-like keys
-  hello-api.yaml: |
+  api-star-wars.yaml: |
     message: Olá amiguinho, agora são %s!
     time_layout: "15:04"
