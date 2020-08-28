@@ -8,8 +8,8 @@ spec:
     app: api-star-wars
   ports:
     - protocol: TCP
-      port: 9080
-      targetPort: 9080
+      port: 9000
+      targetPort: 9000
       # Optional field
       # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
       #nodePort: 30007

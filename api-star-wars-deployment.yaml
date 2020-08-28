@@ -16,4 +16,4 @@ spec:
       - name: api-star-wars
         image: luismar/api_star_wars:0.0.1
         ports:
-        - containerPort: 9080
+        - containerPort: 9000

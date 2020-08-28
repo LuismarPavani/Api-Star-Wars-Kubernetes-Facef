@@ -44,4 +44,21 @@ while true; do wget -q -O- http://api-star-wars-service:8080; done
 
 ```
 
+## API do Star Wars no Cluster
 
+Modo de uso
+
+# deployment
+ ```
+ kubectl apply -f api-star-wars-deployment.yaml
+ ```
+
+# service
+ ```
+ kubectl apply -f api-star-wars-service.yaml
+ ```
+
+# expondo a porta HTTPS
+ ```
+ kubectl port-forward service/api-star-wars-service 9000:9000
+ ```
