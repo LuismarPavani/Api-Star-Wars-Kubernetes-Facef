@@ -1,7 +1,7 @@
 {
   "name": "star-wars-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Desenvolvimento de API do Star Wars",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Andre-Borges/StarWars-Api.git"
+    "url": "git+https://github.com/LuismarPavani/star-wars-api.git"
   },
-  "author": "",
+  "author": "Luismar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Andre-Borges/StarWars-Api/issues"
+    "url": "https://github.com/LuismarPavani/star-wars-api/issues"
   },
-  "homepage": "https://github.com/Andre-Borges/StarWars-Api#readme",
+  "homepage": "https://github.com/LuismarPavani/star-wars-api#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1"
