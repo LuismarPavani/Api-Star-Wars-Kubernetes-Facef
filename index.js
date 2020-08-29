@@ -18,17 +18,18 @@ const baseURL = 'https://swapi.co/api/';
 const getFilmId = (url) => {
     const id = url.split('/')[5];
     return Number(id);
-  }
-  const getCharacterImageUrl = (url) => {
+}
+
+const getCharacterImageUrl = (url) => {
     const getCharacterId = url.split('/')[5];
     return `https://starwars-visualguide.com/assets/img/characters/${getCharacterId}.jpg`;
-  }
+}
 
-  const getFilmImageUrl = (id) => {
+const getFilmImageUrl = (id) => {
     return `https://starwars-visualguide.com/assets/img/films/${id}.jpg`;
-  }
+}
 
-  app.get('/films', async (req, res, next) => {
+app.get('/films', async (req, res, next) => {
     try {
       const { data: { results } } = await axios.request({ baseURL, url: 'films' });
       results.forEach(x => x.id = getFilmId(x.url));
@@ -37,9 +38,9 @@ const getFilmId = (url) => {
       console.error(error);
       next(error);
     }
-  });
+});
 
-  app.get('/films/:id', async (req, res, next) => {
+ app.get('/films/:id', async (req, res, next) => {
     try {
       const filmId = req.params.id;
       const { data } = await axios.request({ baseURL, url: `films/${filmId}` });
@@ -69,15 +70,16 @@ const getFilmId = (url) => {
       console.error(error);
       next(error);
     }
-  });
+});
 
-  app.all('*', async (req, res, next) => {
+app.all('*', async (req, res, next) => {
     res.send({
       routes: ['films', 'films/id']
     })
-  })
+})
 
 const port = process.env.PORT || 9000;
+
 app.listen(port, () => {
   console.log(`Aplicação - Ativa :D | ${port}`);
 });
